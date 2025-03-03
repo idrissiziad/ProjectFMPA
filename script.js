@@ -4,6 +4,11 @@ const quizData = [
     options: ["3", "4", "5"],
     correct: 1
   }
+    {
+    question: "2 + 2 = ?",
+    options: ["3", "4", "5"],
+    correct: 1
+  }
   // Ajoutez vos questions ici
 ];
 
