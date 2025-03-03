@@ -50,3 +50,27 @@ function checkAnswer(answerIndex) {
 }
 
 showQuestion();
+let filteredQuestions = [];
+
+function startQuiz() {
+  const selectedModule = document.getElementById("module-list").value;
+  filteredQuestions = quizData.filter(q => q.module === selectedModule);
+  
+  document.getElementById("module-selector").style.display = "none";
+  document.getElementById("quiz-container").style.display = "block";
+  
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion() {
+  const question = filteredQuestions[currentQuestion];
+  let html = `<h2>${question.question}</h2>`;
+  
+  question.options.forEach((option, index) => {
+    html += `<button onclick="checkAnswer(${index})">${option}</button>`;
+  });
+  
+  document.getElementById("quiz-container").innerHTML = html;
+}
