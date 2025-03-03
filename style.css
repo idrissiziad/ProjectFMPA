@@ -1,2 +1,11 @@
 body { font-family: Arial; margin: 20px; }
 #quiz button { display: block; margin: 10px; padding: 10px; }
+#module-selector {
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
